@@ -1,0 +1,10 @@
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\bin\Debug\CheckersBoard.exe.config
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\bin\Debug\CheckersBoard.exe
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\bin\Debug\CheckersBoard.pdb
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.csprojResolveAssemblyReference.cache
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.Form1.resources
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.Properties.Resources.resources
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.csproj.GenerateResource.cache
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.csproj.CoreCompileInputs.cache
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.exe
+C:\Users\°°bReN\source\repos\CheckersBoard\CheckersBoard\obj\Debug\CheckersBoard.pdb
