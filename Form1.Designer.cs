@@ -30,58 +30,11 @@
 
         private void InitializeComponent()
         {
-            this.tablero = new int[8, 8];
-            for (int m = 0; m < 8; m++)
-                for (int n = 0; n < 8; n++)
-                {
-                    if (m % 2 == 0)  //fila par empieza con claro
-                    {
-                        if (n % 2 == 1) //en fila par las columnas impares tiene fichas
-                        {
-                            if (m < 3)
-                                tablero[n, m] = -1;
-                            else if (m > 4)
-                                tablero[n, m] = 1;
-                        }
-                        else
-                        {
-                            tablero[n,m] = 3;
-                        }
-                    }
-                    else //fila impar
-                    {
-                        if (n % 2 == 0) //en fila impar las columnas pares tienen fichas
-                        {
-                            if (m < 3)
-                                tablero[n, m] = -1;
-                            else if (m > 4)
-                                tablero[n, m] = 1;
-                        }
-                        else
-                        {
-                            tablero[n,m]= 3;
-                        }
-                    }
-                }
-
-            //tablero[0,0] = 0;
-            //tablero[0, 1] = -2;
-
-            System.Console.WriteLine("Tablero inicial");
-            for (int m = 0; m < 8; m++)
-            {
-                for (int n = 0; n < 8; n++)
-                {
-                    System.Console.Write(tablero[n, m]);
-                }
-                System.Console.WriteLine(" ");
-            }
-        
-                    
-
             this.picBoard = new System.Windows.Forms.PictureBox();
             this.picTile = new System.Windows.Forms.PictureBox();
             this.lblDetails = new System.Windows.Forms.Label();
+            this.nuevo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBoard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTile)).BeginInit();
             this.SuspendLayout();
@@ -117,28 +70,97 @@
             this.lblDetails.TabIndex = 2;
             this.lblDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // nuevo
+            // 
+            this.nuevo.Location = new System.Drawing.Point(0, 600);
+            this.nuevo.Name = "nuevo";
+            this.nuevo.Size = new System.Drawing.Size(100, 50);
+            this.nuevo.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(623, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Nuevo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 636);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblDetails);
             this.Controls.Add(this.picTile);
             this.Controls.Add(this.picBoard);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grid Test";
+            this.Text = "Checkers";
             ((System.ComponentModel.ISupportInitialize)(this.picBoard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTile)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        public void iniciaTablero()
+        {
+            this.tablero = new int[8, 8];
+            for (int m = 0; m < 8; m++)
+                for (int n = 0; n < 8; n++)
+                {
+                    if (m % 2 == 0)  //fila par empieza con claro
+                    {
+                        if (n % 2 == 1) //en fila par las columnas impares tiene fichas
+                        {
+                            if (m < 3)
+                                tablero[n, m] = 1;
+                            else if (m > 4)
+                                tablero[n, m] = -1;
+                        }
+                        else
+                        {
+                            tablero[n, m] = 3;
+                        }
+                    }
+                    else //fila impar
+                    {
+                        if (n % 2 == 0) //en fila impar las columnas pares tienen fichas
+                        {
+                            if (m < 3)
+                                tablero[n, m] = 1;
+                            else if (m > 4)
+                                tablero[n, m] = -1;
+                        }
+                        else
+                        {
+                            tablero[n, m] = 3;
+                        }
+                    }
+                }
+
+            //tablero[0,0] = 0;
+            //tablero[0, 1] = -2;
+
+            System.Console.WriteLine("Tablero inicial");
+            for (int m = 0; m < 8; m++)
+            {
+                for (int n = 0; n < 8; n++)
+                {
+                    System.Console.Write(tablero[n, m]);
+                }
+                System.Console.WriteLine(" ");
+            }
+        }
         //#endregion
         private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.PictureBox picBoard;
         private System.Windows.Forms.PictureBox picTile;
+        private System.Windows.Forms.Button nuevo;
         private int[,] tablero;
+        private System.Windows.Forms.Button button1;
     }
 }
 
